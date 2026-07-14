@@ -1,0 +1,16 @@
+{
+  "name": "gerrit-chat-service",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Node.js AI chat service for Gerrit chat plugin",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@mariozechner/pi-ai": "*",
+    "@mariozechner/pi-coding-agent": "*",
+    "@sinclair/typebox": "^0.34.41",
+    "express": "^4.21.2"
+  }
+}

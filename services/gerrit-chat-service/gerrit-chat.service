@@ -1,0 +1,17 @@
+[Unit]
+Description=Gerrit Chat Node.js Service
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/gerrit-chat-service
+Environment=PORT=8787
+Environment=GERRIT_BASE_URL=http://localhost:8080
+Environment=GERRIT_USERNAME=admin
+Environment=GERRIT_PASSWORD=secret
+ExecStart=/usr/bin/node /opt/gerrit-chat-service/index.js
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target
